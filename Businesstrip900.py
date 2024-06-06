@@ -11,7 +11,6 @@ elif k > 0:
         x += max(ai)
         ai.pop()
         z += 1
-    print(z)
-    
+    print(z)   
 else:
     print(0)
