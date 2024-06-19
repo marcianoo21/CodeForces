@@ -1,6 +1,5 @@
 t = int(input())
 
-
 def num(a):
     if a >= 1900:
         return 1
@@ -11,7 +10,6 @@ def num(a):
     else:
         return 4
     
-
 for _ in range(t):
     n = int(input())
 
