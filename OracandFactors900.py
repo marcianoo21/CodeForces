@@ -8,7 +8,6 @@ for s in [*open(0)][1:]:
 cases = []
  
 def add_div(n):
-    #for _ in range(k):
     if n % 2 == 0:
         n += 2
     else:
