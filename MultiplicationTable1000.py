@@ -6,5 +6,4 @@ for i in range(1, n+1):
         dividers.append(i)
 
 
-# print(f"n: {n}, x: {x}")
 print(len(dividers))
