@@ -17,4 +17,3 @@ while x < n:
     x += 1
 
 print(*a)
-# jebane time complexity za duze://///
