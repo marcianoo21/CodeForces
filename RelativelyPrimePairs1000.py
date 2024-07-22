@@ -7,4 +7,4 @@ if (l >= r) or ((r - l) % 2 != 1):
 else:
     print("YES")
     for i in range(solutions_ammount):
-       print(l+i*2, " ", l+i*2+1) #adjacent numbers will always have a greatest common equal to 1;)
+       print(l+i*2, " ", l+i*2+1) 
