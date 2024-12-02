@@ -1,17 +1,17 @@
-import string
 
-lowercase_alphabet = string.ascii_lowercase
-t = int(input())
-
-result = ""
-track = {}
-index = 0
-for _ in range(t):
-    size = int(input)
-    indices = list(map(int, input().split()))
-    for x in range(indices): # tracking ile razy kazdy znak został dodany keys()
-        if indices[x] > index:
-            track[lowercase_alphabet[1]] = index+1
-        else:
-            track[lowercase_alphabet[x]] = index
-# cos zle myslisz
+def solve():
+    n = int(input())
+    a = [int(x) for x in input().split()]
+    cnt = [0] * 26
+    s = ''
+    for i in range(n):
+        for j in range(26):
+            if cnt[j] == a[i]: 
+                cnt[j] += 1
+                s += chr(97 + j)
+                break
+    print(s)
+ 
+ 
+for _ in range(int(input())):
+    solve()
