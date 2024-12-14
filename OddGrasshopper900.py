@@ -59,4 +59,5 @@ end_time = time.time()
 print(*ans)
 execution_time = end_time - start_time
 print(f"Czas wykonania: {execution_time} sekund")
+
 # FUCKING YEAHH
