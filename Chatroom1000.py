@@ -1,4 +1,3 @@
-
 s = str(input())
 word = 'hello'
 i = 0
