@@ -1,4 +1,11 @@
+def print_2D_list(list):
+    for i in range(n):
+        for j in range(n):
+            print(list[i][j], end=' ')
+        print()
+
 t = int(input())
+
 for _ in range(t):   
     n = int(input())
     if n == 2:
@@ -8,19 +15,21 @@ for _ in range(t):
         num = 1
         indexes = [0] * n*n
 
+        # separate adjacent numbers in the first half
         for i in range(0, n*n, 2):
             indexes[i] = num
             num += 1
-    
+
+        # separate adjacent numbers in the second half
         for i in range(1, n*n, 2):
             indexes[i] = num
             num += 1
-    
+
+        # convert 1D list on 2D list
         for i in range(n):
             for j in range(n):
                 square[i][j] = indexes[(j % n)+n*i]
         
-        for i in range(n):
-            for j in range(n):
-                print(square[i][j], end=' ')
-            print()
+        # induce printing function
+        print_2D_list(square)
+       
