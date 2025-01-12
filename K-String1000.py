@@ -15,7 +15,6 @@ for value in stats.values():
     if value % k != 0:
         flag = False
 
-    
 if flag == False:
     print(-1)
 else:
