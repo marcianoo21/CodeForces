@@ -1,13 +1,13 @@
 ### Rozwiązanie gdy można zmieniać kolejność grup
 
-# n = int(input())
-# s = list(map(int, input().split()))
-# if sum(s) % 4 != 0:
-#     result = (sum(s) // 4) + 1
-# else:
-#     result = (sum(s) // 4)
+n = int(input())
+s = list(map(int, input().split()))
+if sum(s) % 4 != 0:
+    result = (sum(s) // 4) + 1
+else:
+    result = (sum(s) // 4)
 
-# print(result)
+print(result)
 
 
 
