@@ -6,21 +6,22 @@ for _ in range(t):
     b = []
     c = []
 
-    div1 = min(a)
-    for ele in a:
-        if ele % div1 == 0:
-            continue      
+    divider1 = min(a)
+    for element in a :
+        if element % divider1 == 0:
+            continue
         else:
-           b.append(ele)
+            b.append(element)
+
     if len(b) > 0:
-        div2 = min(b)
-        for x in b:
-            if x % div2 == 0:
-                continue      
+        divider2 = min(b)
+        for ele in b:
+            if ele % divider2 == 0:
+                continue
             else:
-                c.append(x)
+                c.append(ele)
                 break
-    
+
     if len(c) > 0:
         print("NO")
     else:
