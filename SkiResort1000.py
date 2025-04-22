@@ -43,22 +43,19 @@ for _ in range(t):
 
     if min(a) > q:
         results.append(0)
-        # print(0)
     elif max(a) < q: 
         sum1 = 0
         for k in range(k, n+1):
             sum1 += n - k + 1
         results.append(sum1)
-        # print(sum1)
     else:
         pivots = find_pivots(a, q)
         lists = devide_lists(pivots, a)
         valid_lists = remove_too_short_lists(lists)
         for listt in valid_lists:
             sums.append(comb_number(listt, k))
-        # print(*sums, sums)
         results.append(sum(sums))
-        # print(sum(sums))
+        
 print(*results)
 
 
