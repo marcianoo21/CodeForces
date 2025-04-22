@@ -7,6 +7,7 @@ for _ in range(n):
 
 supercentral_count = 0
 print(points)
+
 for x, y in points:
     has_upper = False
     has_lower = False
