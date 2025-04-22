@@ -10,8 +10,10 @@ for _ in range(t):
     counter = 0
     even = 0
     flag = False
+    
     n, k = map(int, input().split())
     a = list(map(int, input().split()))
+    
     if multi(a) % k == 0:
         print(0)
     elif k == 4: # 3 4  3 5 3
@@ -31,6 +33,7 @@ for _ in range(t):
             rest = k - (x % k)
             if rest < temp: 
                 temp = rest
+                
         counter = temp
         print(counter)
 
