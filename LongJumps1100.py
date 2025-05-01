@@ -1,3 +1,5 @@
+### TO SLOW
+
 # t = int(input())
 # for _ in range(t):
 #     n = int(input())
@@ -15,18 +17,19 @@
         
 #     print(max_val)
             
-        
+  
+### FAST ENOUGH      
 t = int(input())
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-    dp = [0] * n  # dp[i] = maksymalna suma zaczynając od indeksu i
+    dp = [0] * n 
 
-    for i in range(n - 1, -1, -1):  # idziemy od końca do początku
+    for i in range(n - 1, -1, -1): 
         jump = i + a[i]
-        if jump < n:
-            dp[i] = a[i] + dp[jump]
+        if jump >= n:
+            dp[i] = a[i] 
         else:
-            dp[i] = a[i]
+            dp[i] = a[i] + dp[jump]
 
     print(max(dp))
