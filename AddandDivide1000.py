@@ -1,4 +1,3 @@
-
 def divisions_number(a, b):
     count = 0
     while a > 0:
