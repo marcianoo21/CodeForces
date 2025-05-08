@@ -1,21 +1,19 @@
 n = int(input())
  
-a1 = 0
-b1 = 1
 res = ''
+laptops = []
 for i in range(n):
     
     a, b = map(int, input().split())
-    if i == 0 or a1 == b1:
-        a1, b1 = a, b
-    if a < a1 and b > b1 or a > a1 and b < b1:
-        res = 'Happy Alex'
+    laptops.append((a, b))
+    
+laptops.sort() # sort po cenie (a)
+    
+for i in range(n-1):
+    if laptops[i][1] > laptops[i + 1][1]:
+        res = "Happy Alex"
         break
     else:
-        res = 'Poor Alex'
-    
+        res = "Poor Alex"
+        
 print(res)
-
-
-
-
