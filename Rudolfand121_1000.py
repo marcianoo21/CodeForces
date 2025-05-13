@@ -4,66 +4,53 @@
 
 
 def solo_zero(a):
-    for x in a:
-        if x != 0:
-            return False
-    return True
+    return all(x == 0 for x in a)
 
 def at_least_3(a):
-    i = 0
+    count = 0
     for x in a:
         if x > 0:
-            i += 1
-    if i >= 3:
-        return True 
-    else:
-        return False
+            count += 1
+            if count >= 3:
+                return True
+    return False
+
+def any_neg(a):
+    return any(x < 0 for x in a)
+
 def deleting(a, k):
-    while at_least_3(a) and any_neg(a) != True:
+    n = len(a)
+    while k <= n - 3 and at_least_3(a) and not any_neg(a):
         if a[k] > 0:
             a[k] -= 1
             a[k+1] -= 2
             a[k+2] -= 1
-        elif solo_zero(a):
-            break
         else:
-            k += 1 
-        print(a)
-        print(a[k], 'iter', k)      
-             
-def any_neg(a):
-    for x in a:
-        if x < 0:
-            return True
-    return False
+            k += 1
 
-a = [0, 0, 1, 2, 1, 0]
-k = 0
-for _ in range(3):
+    if solo_zero(a):
+        print("YES")
+        return True
+    else:
+        print("NO")
+        return False
     
-    print(deleting(a, k))
-# t = int(input())
 
-# for _ in range(t):
-#     ans = []
-#     k = 0
-#     n = int(input())
-#     a = list(map(int, input().split()))
-#     i = 0
-#     while any_neg(a) != True and at_least_3(a) or solo_zero(a) != True:
-#         deleting(a, k)
-#         print(*a, "iteracja", i)
-#         if solo_zero(a):
-#             print("YES")
-#             break
-#         else:
-#             print("NO")
-#         i += 1
-      
-#     if solo_zero(a):
-#         print("YES")
-#     else:
-#         print("NO")
+# a = [2, 4, 3, 2, 1, 0]
+# a = [2, 4, 4, 5, 1]
+# k = 0
+# ans = []
+    
+
+t = int(input())
+
+for _ in range(t):
+    k = 0
+    n = int(input())
+    a = list(map(int, input().split()))
+    
+    deleting(a, k)
+   
         
         
     # ans.append("NO")
