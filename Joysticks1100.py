@@ -13,11 +13,6 @@ while a1 > 0 and a2 > 0:
     elif a1 > a2:
         a2 += 1
         a1 -= 2
-    elif a1 < a2:
-        a1 += 1
-        a2 -= 2
-    elif a1 + a2 <= 2:
-        time -= 1
     else:
         a1 += 1
         a2 -= 2
