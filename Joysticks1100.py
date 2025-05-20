@@ -18,11 +18,9 @@ while a1 > 0 and a2 > 0:
         a2 -= 2
     elif a1 + a2 <= 2:
         time -= 1
-        print("MNIEJ")
     else:
         a1 += 1
         a2 -= 2
-        print("HERE")
     time += 1
 
 print(time)
