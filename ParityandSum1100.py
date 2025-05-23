@@ -5,34 +5,38 @@ def isParity(lst):
 def maxOdd(lst):
     return max([x for x in lst if x % 2 != 0])
 
-def secondMaxEven(lst):
+def minEven(lst):
     soloEvens = [x for x in lst if x % 2 == 0]
-    uniqEvens = sorted(list(set(soloEvens)))
-    return uniqEvens[-2]
+    return sorted(soloEvens)[0]
 
 def maxEven(lst):
     soloEvens = [x for x in lst if x % 2 == 0]
     return sorted(soloEvens)[-1]
 
-def evenQuantity(lst):
-    return len([x for x in lst if x % 2 == 0])
-
 t = int(input())
 
+
 for _ in range(t):
+    counter = 0
     n = int(input())
     a = list(map(int, input().split()))
-    if isParity(a):
-        print("RES", 0)
-    else:
-        if secondMaxEven(a) + maxOdd(a) <= maxEven(a):
-            print("RES", evenQuantity(a)+1)
+   
+    while isParity(a) == False:
+        min_even_idx = a.index(minEven(a))
+        max_odd_idx = a.index(maxOdd(a))
+        max_even_idx = a.index(maxEven(a))
+        # print("min even idx", min_even_idx,"max even idx", max_even_idx,"max odd idx", max_odd_idx,"ele of max odd", a[max_odd_idx],"ele of min even", a[min_even_idx],"ele of max even", a[max_even_idx])
+        if a[min_even_idx] < a[max_odd_idx]:
+            a[min_even_idx] += a[max_odd_idx]
         else:
-            print("RES",evenQuantity(a))
+            # print("WAZNE", "MAX EVEN", a[max_even_idx], "MIN EVEN", a[min_even_idx])
+            a[max_odd_idx] += a[max_even_idx]
+            
+        counter += 1
+        # print("LISTA A", a)
+    print(counter)
+            
         
         
-       
-       
-    
-# n = [3 ,2, 2, 8] 
-# print(secondMaxEven(n))
+        
+  
