@@ -15,7 +15,6 @@ def maxEven(lst):
 
 t = int(input())
 
-
 for _ in range(t):
     counter = 0
     n = int(input())
