@@ -7,6 +7,7 @@ for _ in range(t):
     for _ in range(n):
         s = input()
         strings.append(s)
+        
     string_set = set(strings) # set szybszy do wyszukiwania
     for string in strings:
         for x in range(1,len(string)):
