@@ -1,31 +1,52 @@
-import matplotlib.pyplot as plt
+# def isNonDecreasing(list):
+#     pivot = list[0]
+#     for ele in list:
+#         if ele < pivot:
+#             return False
+#         pivot = ele
+#     return True
 
-# Dane dla wykresu 1: Produkcja piwa (mln hl)
-labels = ['Mahou-San Miguel', 'Damm (Estrella Damm)', 'Heineken España', 'Estrella Galicia']
-sizes = [12.81, 11.34, 10.07, 4.81]
-percentages = [33, 28, 24, 12]
-colors = ['#FF6F61', '#6B7280', '#10B981', '#FBBF24']
-explode = (0, 0, 0, 0)  # Brak "eksplozji" segmentów
+# t = int(input())
 
-# Wykres 1: Kołowy
-plt.figure(figsize=(8, 6))
-plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.0f%%', startangle=90)
-plt.title('Produkcja piwa w Hiszpanii (mln hl)')
-plt.axis('equal')  # Równy okrąg
-plt.show()
+# for  _ in range(t):
+#     n = int(input())
+#     a = list(map(int, input().split()))
+    
+#     for i in range(n-1):
+#         min_int = min(a[i], a[i+1])
+#         # print("MIN", min_int)
+#         a[i] -= min_int
+#         a[i+1] -= min_int
+#     # print("A after", a)
+#     if isNonDecreasing(a):
+#         print("YES")
+#     else:
+#         print("NO")
+# 4
+# 1 4 2 3 - NO
 
-# Dane dla wykresu 2: Średnie ceny (€, puszka 33 cl)
-brands = ['Heineken', 'Mahou 5 Estrellas', 'Estrella Damm']
-prices = [0.785, 0.67, 0.69]  # Średnie z przedziałów
-colors_bar = ['#10B981', '#FF6F61', '#6B7280']
+# def deleteDuplicates(head):
+#     list = []
+#     for ele in head:
+#         if ele not in list:
+#             list.append(ele)
+#         else:
+#             while ele in list:
+#                 list.remove(ele)
+#     return list
 
-# Wykres 2: Słupkowy
-plt.figure(figsize=(8, 6))
-plt.bar(brands, prices, color=colors_bar)
-plt.title('Średnie ceny piwa (puszka 33 cl)')
-plt.ylabel('Cena (€)')
-plt.ylim(0, 1)  # Skala od 0 do 1 dla lepszej czytelności
-plt.grid(axis='y', linestyle='--', alpha=0.7)
-for i, v in enumerate(prices):
-    plt.text(i, v + 0.02, f'€{v:.3f}', ha='center', fontweight='bold')
-plt.show()
+# head = [1,2,3,3,4,4,5]
+# print(deleteDuplicates(head))
+
+nums1 = [0]
+# print(sorted(nums))
+# print(nums.sort())
+# print(nums.index(2))
+
+for x in range(len(nums1)-1,-1, -1):
+    if nums1[x] == 0:
+        nums1.pop(x)
+    else:
+        break
+    print("iteracja", x)
+print(nums1)
