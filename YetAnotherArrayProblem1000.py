@@ -30,7 +30,7 @@ for _ in range(t):
         print(2)
     else:
         for ele in a:
-            for x in range(2,ele*2):
+            for x in range(3,ele*2, 2):
                 if gcd(x,ele) == 1:
                     result.append(x)
                     break   
